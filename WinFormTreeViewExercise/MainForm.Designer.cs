@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.TreeView treeDataList;
+			this.treeDataList = new System.Windows.Forms.TreeView();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.label1 = new System.Windows.Forms.Label();
@@ -59,10 +59,19 @@
 			this.lblShipRegion = new System.Windows.Forms.Label();
 			this.lblShipPostalCode = new System.Windows.Forms.Label();
 			this.lblShipCountry = new System.Windows.Forms.Label();
-			treeDataList = new System.Windows.Forms.TreeView();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			this.SuspendLayout();
+			// 
+			// treeDataList
+			// 
+			this.treeDataList.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.treeDataList.Location = new System.Drawing.Point(10, 11);
+			this.treeDataList.Margin = new System.Windows.Forms.Padding(4);
+			this.treeDataList.Name = "treeDataList";
+			this.treeDataList.Size = new System.Drawing.Size(349, 709);
+			this.treeDataList.TabIndex = 1;
+			this.treeDataList.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeDataList_NodeMouseClick);
 			// 
 			// tableLayoutPanel1
 			// 
@@ -72,7 +81,7 @@
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 6F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-			this.tableLayoutPanel1.Controls.Add(treeDataList, 1, 1);
+			this.tableLayoutPanel1.Controls.Add(this.treeDataList, 1, 1);
 			this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 3, 1);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -84,15 +93,6 @@
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 7F));
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(1211, 731);
 			this.tableLayoutPanel1.TabIndex = 0;
-			// 
-			// treeDataList
-			// 
-			treeDataList.Dock = System.Windows.Forms.DockStyle.Fill;
-			treeDataList.Location = new System.Drawing.Point(10, 11);
-			treeDataList.Margin = new System.Windows.Forms.Padding(4);
-			treeDataList.Name = "treeDataList";
-			treeDataList.Size = new System.Drawing.Size(349, 709);
-			treeDataList.TabIndex = 1;
 			// 
 			// tableLayoutPanel2
 			// 
@@ -153,6 +153,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label1.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label1.Location = new System.Drawing.Point(3, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(242, 50);
@@ -164,6 +165,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label2.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label2.Location = new System.Drawing.Point(3, 50);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(242, 50);
@@ -175,6 +177,7 @@
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label3.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label3.Location = new System.Drawing.Point(3, 100);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(242, 50);
@@ -186,6 +189,7 @@
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label4.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label4.Location = new System.Drawing.Point(3, 150);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(242, 50);
@@ -197,6 +201,7 @@
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label5.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label5.Location = new System.Drawing.Point(3, 200);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(242, 50);
@@ -208,6 +213,7 @@
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label6.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label6.Location = new System.Drawing.Point(3, 250);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(242, 50);
@@ -219,6 +225,7 @@
 			// 
 			this.label7.AutoSize = true;
 			this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label7.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label7.Location = new System.Drawing.Point(3, 300);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(242, 50);
@@ -230,6 +237,7 @@
 			// 
 			this.label8.AutoSize = true;
 			this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label8.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label8.Location = new System.Drawing.Point(3, 350);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(242, 50);
@@ -241,6 +249,7 @@
 			// 
 			this.label9.AutoSize = true;
 			this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label9.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label9.Location = new System.Drawing.Point(3, 400);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(242, 50);
@@ -252,6 +261,7 @@
 			// 
 			this.label10.AutoSize = true;
 			this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label10.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label10.Location = new System.Drawing.Point(3, 450);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(242, 50);
@@ -263,6 +273,7 @@
 			// 
 			this.label11.AutoSize = true;
 			this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label11.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label11.Location = new System.Drawing.Point(3, 500);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(242, 50);
@@ -274,6 +285,7 @@
 			// 
 			this.label12.AutoSize = true;
 			this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label12.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label12.Location = new System.Drawing.Point(3, 550);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(242, 50);
@@ -285,6 +297,7 @@
 			// 
 			this.label13.AutoSize = true;
 			this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label13.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label13.Location = new System.Drawing.Point(3, 600);
 			this.label13.Name = "label13";
 			this.label13.Size = new System.Drawing.Size(242, 50);
@@ -296,6 +309,7 @@
 			// 
 			this.label14.AutoSize = true;
 			this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label14.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.label14.Location = new System.Drawing.Point(3, 650);
 			this.label14.Name = "label14";
 			this.label14.Size = new System.Drawing.Size(242, 50);
@@ -493,6 +507,7 @@
 		private System.Windows.Forms.Label lblShipRegion;
 		private System.Windows.Forms.Label lblShipPostalCode;
 		private System.Windows.Forms.Label lblShipCountry;
+		private System.Windows.Forms.TreeView treeDataList;
 	}
 }
 
